@@ -1,39 +1,54 @@
-/* Grundfonts */
+/* Grundfonts & Body */
 body {
   font-family: 'Inter', sans-serif;
-  color: #1D1D1F; /* dunkles Anthrazit für Text */
-  background: #FFFFFF; /* Weißer Hintergrund */
+  color: #1D1D1F; /* dunkles Anthrazit */
+  background: #FFFFFF;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
-/* Hero */
+/* Hero/Header */
 #hero {
-  background-color: #FFFFFF; /* Weiß, keine grauen Balken */
-  text-align: center;
-  padding: 120px 20px; /* viel Weißraum für modern look */
+  background-color: #FFFFFF;
+  padding: 120px 20px;
 }
 
-#hero h1 {
+.hero-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
   font-weight: 700;
-  font-size: 3rem; /* groß & prominent */
-  max-width: 900px;
-  margin: 0 auto 20px auto;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-#hero p {
+.highlight {
+  color: #00CCB8; /* Timenizer Türkis */
+}
+
+.hero-left p {
   font-weight: 400;
   font-size: 1.25rem;
-  max-width: 650px;
-  margin: 0 auto 40px auto;
-  color: #6E7075; /* sekundärer Text */
+  color: #6E7075;
+  margin-bottom: 40px;
 }
 
 #hero button {
   font-weight: 600;
   font-size: 1rem;
-  background: #00CCB8; /* kräftiges Timenizer-Türkis */
+  background: #00CCB8; /* Türkis */
   color: white;
   border: none;
   padding: 16px 36px;
@@ -47,8 +62,18 @@ body {
   transform: translateY(-2px);
 }
 
-/* Container für Content-Breite */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.hero-right {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-right img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.hero-right img:hover {
+  transform: translateY(-5px);
 }
