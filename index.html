@@ -11,12 +11,27 @@
 
   <!-- Hero Section -->
   <section id="hero">
-    <div class="container">
-      <h1>Die meisten Unternehmer haben kein Zeitproblem – sondern Chaos.</h1>
-      <p>Timenizer bringt Struktur in dein digitales Business – von Buchhaltung über Immocloud bis zu deinem Postfach.</p>
-      <button onclick="scrollToCheck()">Jetzt Chaos-Check starten</button>
+    <div class="container hero-grid">
+      <!-- Linke Seite: Headline + CTA -->
+      <div class="hero-left">
+        <h1>Die meisten Unternehmer haben kein <span class="highlight">Zeitproblem</span> – sondern <span class="highlight">Chaos</span>.</h1>
+        <p>Timenizer bringt Struktur in dein digitales Business – von Buchhaltung über Immocloud bis zu deinem Postfach.</p>
+        <button onclick="scrollToCheck()">Jetzt Chaos-Check starten</button>
+      </div>
+
+      <!-- Rechte Seite: Illustration / Mockup -->
+      <div class="hero-right">
+        <img src="dashboard-mockup.png" alt="Timenizer Dashboard Preview">
+      </div>
     </div>
   </section>
+
+  <script>
+    function scrollToCheck() {
+      // Platzhalter für späteren Chaos-Check
+      console.log("Scroll zum Chaos-Check");
+    }
+  </script>
 
 </body>
 </html>
