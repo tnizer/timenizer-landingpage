@@ -156,72 +156,98 @@ button:hover {
 
 /* Chaos Check Section */
 #chaos-check {
-  padding: 100px 20px;
+  padding: 120px 20px;
   background: #F9FBFB;
   text-align: center;
 }
 
 #chaos-check h2 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
+  font-size: 2.4rem;
+  margin-bottom: 12px;
 }
 
 .subtitle {
   color: #6E7075;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+  font-size: 1.1rem;
 }
 
+/* GRID FIX */
 .check-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 50px; /* mehr Luft */
   max-width: 900px;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
 }
 
+/* QUESTION BLOCK */
 .question {
   text-align: left;
 }
 
 .question label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
+/* MODERNE INPUTS */
 input, select {
   width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #D1D4D8;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid #E2E6EA;
+  background: #FFFFFF;
   font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
 
+/* HOVER */
+input:hover, select:hover {
+  border-color: #00CCB8;
+  box-shadow: 0 4px 12px rgba(0,204,184,0.08);
+}
+
+/* FOCUS (wichtig für Premium Feel) */
+input:focus, select:focus {
+  outline: none;
+  border-color: #00CCB8;
+  box-shadow: 0 0 0 3px rgba(0,204,184,0.15);
+}
+
+/* BUTTON */
 .primary-btn {
   background: #00CCB8;
   color: white;
   border: none;
-  padding: 16px 32px;
-  border-radius: 8px;
+  padding: 18px 40px;
+  border-radius: 10px;
   font-weight: 600;
+  font-size: 1.05rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.25s ease;
 }
 
 .primary-btn:hover {
   background: #00A99E;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,204,184,0.25);
 }
 
-/* Ergebnis */
+/* RESULT */
 #result-box {
-  margin-top: 40px;
-  padding: 30px;
+  margin-top: 50px;
+  padding: 35px;
   background: white;
-  border-radius: 12px;
+  border-radius: 14px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 
 .hidden {
