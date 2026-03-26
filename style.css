@@ -295,3 +295,51 @@ input:focus, select:focus {
   border-radius: 12px 0 0 12px;
   transition: width 0.3s ease;
 }
+
+/* ============================= */
+/* MOBILE RESPONSIVE              */
+/* ============================= */
+@media (max-width: 768px) {
+  
+  /* Hero */
+  .hero-grid {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+  }
+
+  /* Chaos-Check */
+  .chaos-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .check-grid {
+    grid-template-columns: 1fr; /* eine Spalte */
+    gap: 20px;
+  }
+
+  #chaos-sidebar {
+    width: 100%;
+    position: relative;
+    top: auto;
+  }
+
+  /* Buttons und Inputs volle Breite */
+  input, select, .primary-btn {
+    width: 100%;
+  }
+
+  /* Fortschrittsbalken etwas höher */
+  .progress-bar {
+    height: 18px;
+  }
+}
