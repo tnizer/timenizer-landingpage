@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <!-- Sticky Logo Bar -->
@@ -36,7 +37,6 @@
       <div class="hero-right">
         <img src="dashboard-mockup.png" alt="Dashboard">
 
-        <!-- Callouts rund ums Bild -->
         <div class="callout c1">
           <div class="callout-arrow"></div>
           <div class="callout-text">„Wo war nochmal diese Rechnung…?“</div>
@@ -62,110 +62,102 @@
     </div>
   </section>
 
+  <!-- Chaos-Check -->
+  <section id="chaos-check">
+    <div class="container">
+
+      <h2>Wie organisiert ist dein Business wirklich?</h2>
+      <p class="subtitle">Finde in 30 Sekunden heraus, wo du gerade stehst.</p>
+
+      <div class="check-grid">
+
+        <div class="question">
+          <label>Wie viele ungelesene E-Mails hast du aktuell?</label>
+          <input type="number" id="emails" placeholder="z. B. 1200">
+        </div>
+
+        <div class="question">
+          <label>Wie gut sind deine Belege & Dokumente organisiert?</label>
+          <select id="docs">
+            <option value="0">Perfekt strukturiert</option>
+            <option value="20">Teilweise chaotisch</option>
+            <option value="40">Ich suche ständig Dinge</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <label>Wie viele Tools nutzt du parallel?</label>
+          <input type="number" id="tools" placeholder="z. B. 6">
+        </div>
+
+        <div class="question">
+          <label>Wie viel läuft bei dir schon automatisiert?</label>
+          <select id="automation">
+            <option value="0">Sehr viel automatisiert</option>
+            <option value="20">Teilweise</option>
+            <option value="40">Fast nichts</option>
+          </select>
+        </div>
+
+      </div>
+
+      <button onclick="calculateScore()" class="primary-btn">
+        Chaos-Score berechnen
+      </button>
+
+      <div id="result-box" class="hidden">
+        <h3 id="score-text"></h3>
+        <p id="recommendation"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SCRIPTS (JETZT KORREKT!) -->
   <script>
-  function scrollToCheck() {
-    document.getElementById("chaos-check").scrollIntoView({
-      behavior: "smooth"
-    });
-  }
-</script>
+    function scrollToCheck() {
+      document.getElementById("chaos-check").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    function calculateScore() {
+      let emails = parseInt(document.getElementById('emails').value) || 0;
+      let tools = parseInt(document.getElementById('tools').value) || 0;
+      let docs = parseInt(document.getElementById('docs').value);
+      let automation = parseInt(document.getElementById('automation').value);
+
+      let chaos = 0;
+
+      chaos += emails / 50;
+      chaos += tools * 5;
+      chaos += docs;
+      chaos += automation;
+
+      chaos = Math.min(100, Math.round(chaos));
+
+      let recommendation = "";
+
+      if (chaos < 30) {
+        recommendation = "Sehr gut organisiert 👍 Mit gezielten KI-Automationen kannst du noch effizienter werden.";
+      } 
+      else if (chaos < 70) {
+        recommendation = "Da sammelt sich Chaos 👀 Mit klaren Systemen und ersten Automationen kannst du dir sofort Zeit sparen.";
+      } 
+      else {
+        recommendation = "Dein Business steckt im Chaos 🔥 Timenizer hilft dir, Struktur reinzubringen und Prozesse inklusive KI-Automationen aufzubauen.";
+      }
+
+      document.getElementById("score-text").innerText = "Dein Chaos-Score: " + chaos + "%";
+      document.getElementById("recommendation").innerText = recommendation;
+
+      document.getElementById("result-box").classList.remove("hidden");
+
+      document.getElementById("result-box").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  </script>
 
 </body>
 </html>
-
-  <!-- Chaos-Check -->
-<section id="chaos-check">
-  <div class="container">
-
-    <h2>Wie organisiert ist dein Business wirklich?</h2>
-    <p class="subtitle">Finde in 30 Sekunden heraus, wo du gerade stehst.</p>
-
-    <div class="check-grid">
-
-      <div class="question">
-        <label>Wie viele ungelesene E-Mails hast du aktuell?</label>
-        <input type="number" id="emails" placeholder="z. B. 1200">
-      </div>
-
-      <div class="question">
-        <label>Wie gut sind deine Belege & Dokumente organisiert?</label>
-        <select id="docs">
-          <option value="0">Perfekt strukturiert</option>
-          <option value="20">Teilweise chaotisch</option>
-          <option value="40">Ich suche ständig Dinge</option>
-        </select>
-      </div>
-
-      <div class="question">
-        <label>Wie viele Tools nutzt du parallel?</label>
-        <input type="number" id="tools" placeholder="z. B. 6">
-      </div>
-
-      <div class="question">
-        <label>Wie viel läuft bei dir schon automatisiert?</label>
-        <select id="automation">
-          <option value="0">Sehr viel automatisiert</option>
-          <option value="20">Teilweise</option>
-          <option value="40">Fast nichts</option>
-        </select>
-      </div>
-
-    </div>
-
-    <button onclick="calculateScore()" class="primary-btn">
-      Chaos-Score berechnen
-    </button>
-
-    <div id="result-box" class="hidden">
-      <h3 id="score-text"></h3>
-      <p id="recommendation"></p>
-    </div>
-
-  </div>
-</section>
-<script>
-  
-<script>
-function calculateScore() {
-  let emails = parseInt(document.getElementById('emails').value) || 0;
-  let tools = parseInt(document.getElementById('tools').value) || 0;
-  let docs = parseInt(document.getElementById('docs').value);
-  let automation = parseInt(document.getElementById('automation').value);
-
-  let chaos = 0;
-
-  // Chaos steigt mit:
-  chaos += emails / 50;
-  chaos += tools * 5;
-  chaos += docs;
-  chaos += automation;
-
-  chaos = Math.min(100, Math.round(chaos));
-
-  let text = "";
-  let recommendation = "";
-
-  if (chaos < 30) {
-    text = "Sehr gut organisiert 👍";
-    recommendation = "Du hast dein Business im Griff. Mit gezielten KI-Automationen kannst du noch effizienter werden.";
-  } 
-  else if (chaos < 70) {
-    text = "Da sammelt sich Chaos 👀";
-    recommendation = "Einige Prozesse laufen noch unstrukturiert. Mit klaren Systemen und ersten Automationen kannst du dir sofort Zeit sparen.";
-  } 
-  else {
-    text = "Dein Business steckt im Chaos 🔥";
-    recommendation = "Du verlierst aktuell massiv Zeit durch fehlende Struktur. Timenizer hilft dir, Ordnung reinzubringen und Prozesse inklusive KI-Automationen aufzubauen.";
-  }
-
-  document.getElementById("score-text").innerText = "Dein Chaos-Score: " + chaos + "%";
-  document.getElementById("recommendation").innerText = recommendation;
-
-  document.getElementById("result-box").classList.remove("hidden");
-
-  // optional smooth scroll zum Ergebnis
-  document.getElementById("result-box").scrollIntoView({
-    behavior: "smooth"
-  });
-}
-</script>
