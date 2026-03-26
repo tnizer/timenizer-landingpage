@@ -1,8 +1,8 @@
 /* Grundfonts */
 body {
   font-family: 'Inter', sans-serif;
-  color: #2A2A2E;
-  background: #FFFFFF;
+  color: #1D1D1F; /* dunkles Anthrazit für Text */
+  background: #FFFFFF; /* Weißer Hintergrund */
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -10,40 +10,41 @@ body {
 
 /* Hero */
 #hero {
-  background-color: #F7F8FA; /* helles Grau, Timenizer-Style */
+  background-color: #FFFFFF; /* Weiß, keine grauen Balken */
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px; /* viel Weißraum für modern look */
 }
 
 #hero h1 {
   font-weight: 700;
-  font-size: 2.8rem;
-  max-width: 800px;
+  font-size: 3rem; /* groß & prominent */
+  max-width: 900px;
   margin: 0 auto 20px auto;
 }
 
 #hero p {
   font-weight: 400;
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 0 auto 30px auto;
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin: 0 auto 40px auto;
   color: #6E7075; /* sekundärer Text */
 }
 
 #hero button {
   font-weight: 600;
   font-size: 1rem;
-  background: #1A4DBF; /* seriöser Akzentton */
+  background: #00C4CC; /* kräftiges Timenizer-Türkis */
   color: white;
   border: none;
-  padding: 14px 28px;
-  border-radius: 4px;
+  padding: 16px 36px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #hero button:hover {
-  background: #163EA6;
+  background: #00A5A9; /* dunkleres Türkis beim Hover */
+  transform: translateY(-2px);
 }
 
 /* Container für Content-Breite */
