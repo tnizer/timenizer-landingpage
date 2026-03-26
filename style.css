@@ -174,16 +174,25 @@ button:hover {
   font-size: 1.1rem;
 }
 
-/* GRID FIX */
+/* Flex Container für Fragen + Sidebar */
+.chaos-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  gap: 40px;
+}
+
+/* Fragen Grid */
 .check-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px 50px;
-  max-width: 900px;
-  margin: 0 auto 60px;
+  flex: 1;
 }
 
-/* QUESTION BLOCK */
+/* Question Styles */
 .question {
   text-align: left;
 }
@@ -237,31 +246,37 @@ input:focus, select:focus {
   box-shadow: 0 10px 25px rgba(0,204,184,0.25);
 }
 
-/* RESULT BOX */
-#result-box {
-  margin-top: 50px;
-  padding: 35px;
-  background: white;
+/* ============================= */
+/* SCORE SIDEBAR                  */
+/* ============================= */
+#chaos-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  background: #FFFFFF;
+  padding: 20px;
   border-radius: 14px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 140px;
 }
 
-.hidden {
-  display: none;
+#score-text {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#recommendation {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #6E7075;
 }
 
 /* ============================= */
 /* LIVE CHAOS-LEVEL FORTSCHRITTSBALKEN */
 /* ============================= */
 #chaos-progress {
-  max-width: 600px;
-  margin: 20px auto 40px;
-  text-align: left;
-  font-weight: 600;
-  color: #1D1D1F;
+  margin-top: 10px;
 }
 
 .progress-bar {
