@@ -101,10 +101,15 @@
 
       </div>
 
-      <button onclick="calculateScore()" class="primary-btn">
-        Chaos-Score berechnen
-      </button>
+      <!-- Live Chaos-Level Fortschrittsbalken -->
+      <div id="chaos-progress">
+        <label>Dein Chaos-Level:</label>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width:0%"></div>
+        </div>
+      </div>
 
+      <!-- Ergebnis Box -->
       <div id="result-box" class="hidden">
         <h3 id="score-text"></h3>
         <p id="recommendation"></p>
@@ -113,7 +118,7 @@
     </div>
   </section>
 
-  <!-- SCRIPTS (JETZT KORREKT!) -->
+  <!-- SCRIPTS -->
   <script>
     function scrollToCheck() {
       document.getElementById("chaos-check").scrollIntoView({
@@ -121,42 +126,43 @@
       });
     }
 
-    function calculateScore() {
+    function updateChaosScore() {
       let emails = parseInt(document.getElementById('emails').value) || 0;
       let tools = parseInt(document.getElementById('tools').value) || 0;
       let docs = parseInt(document.getElementById('docs').value);
       let automation = parseInt(document.getElementById('automation').value);
 
       let chaos = 0;
-
       chaos += emails / 50;
       chaos += tools * 5;
       chaos += docs;
       chaos += automation;
-
       chaos = Math.min(100, Math.round(chaos));
 
-      let recommendation = "";
+      // Fortschrittsbalken aktualisieren
+      document.querySelector('.progress-fill').style.width = chaos + '%';
 
+      // Ergebnis-Box aktualisieren
+      document.getElementById("score-text").innerText = "Dein Chaos-Score: " + chaos + "%";
+
+      let recommendation = "";
       if (chaos < 30) {
         recommendation = "Sehr gut organisiert 👍 Mit gezielten KI-Automationen kannst du noch effizienter werden.";
-      } 
-      else if (chaos < 70) {
+      } else if (chaos < 70) {
         recommendation = "Da sammelt sich Chaos 👀 Mit klaren Systemen und ersten Automationen kannst du dir sofort Zeit sparen.";
-      } 
-      else {
+      } else {
         recommendation = "Dein Business steckt im Chaos 🔥 Timenizer hilft dir, Struktur reinzubringen und Prozesse inklusive KI-Automationen aufzubauen.";
       }
 
-      document.getElementById("score-text").innerText = "Dein Chaos-Score: " + chaos + "%";
       document.getElementById("recommendation").innerText = recommendation;
-
       document.getElementById("result-box").classList.remove("hidden");
-
-      document.getElementById("result-box").scrollIntoView({
-        behavior: "smooth"
-      });
     }
+
+    // Event-Listener auf alle Inputs/Selects
+    document.querySelectorAll('#chaos-check input, #chaos-check select').forEach(el => {
+      el.addEventListener('input', updateChaosScore);
+      el.addEventListener('change', updateChaosScore);
+    });
   </script>
 
 </body>
