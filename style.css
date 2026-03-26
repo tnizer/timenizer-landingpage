@@ -1,37 +1,36 @@
-/* Fonts & Body */
 body {
   font-family: 'Inter', sans-serif;
   color: #1D1D1F;
   background: #FFFFFF;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
 }
 
-/* Logo-Balken oben */
+/* Topbar */
 #topbar {
-  background: rgba(240, 244, 248, 0.85); /* hellgrau, leicht durchsichtig */
-  padding: 15px 20px;
+  background: rgba(240, 244, 248, 0.7);
+  backdrop-filter: blur(6px);
+  padding: 15px;
   text-align: center;
 }
 
 #topbar img {
-  max-height: 40px;
+  height: 40px;
 }
 
-/* Hero/Header */
+/* Hero */
 #hero {
-  background-color: #FFFFFF;
   padding: 120px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-grid {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 60px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .hero-left {
@@ -39,7 +38,6 @@ body {
 }
 
 .hero-left h1 {
-  font-weight: 700;
   font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -50,45 +48,37 @@ body {
 }
 
 .hero-left p {
-  font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: #6E7075;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
-#hero button {
-  font-weight: 600;
-  font-size: 1rem;
+button {
   background: #00CCB8;
   color: white;
   border: none;
-  padding: 16px 36px;
+  padding: 16px 32px;
   border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: 0.3s;
 }
 
-#hero button:hover {
+button:hover {
   background: #00A99E;
   transform: translateY(-2px);
 }
 
-/* Rechte Seite (Bild + Callouts) */
+/* Right Side */
 .hero-right {
   flex: 1;
-  text-align: center;
   position: relative;
 }
 
 .hero-right img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.hero-right img:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
 /* Callouts */
@@ -96,38 +86,36 @@ body {
   position: absolute;
   display: flex;
   align-items: center;
-  animation: float 4s ease-in-out infinite; /* schwebend */
+  animation: float 5s ease-in-out infinite;
 }
 
 .callout-text {
-  background: #FFFFFF;
-  padding: 8px 12px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #1D1D1F;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
   max-width: 180px;
-  text-align: center;
 }
 
-/* Pfeile */
+/* Pfeil zeigt zur Bubble (nicht zum Bild) */
 .callout-arrow {
   width: 0;
   height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #00CCB8; /* Türkis */
-  margin-right: 8px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #00CCB8;
+  margin-right: 6px;
 }
 
-/* Positionierung der Callouts */
-.callout1 { top: 15%; left: -25%; }
-.callout2 { top: 50%; left: -30%; }
-.callout3 { bottom: 15%; left: -28%; }
+/* Neue sichere Positionen (IM Bildbereich!) */
+.c1 { top: 10%; left: 10%; }
+.c2 { top: 60%; left: 5%; }
+.c3 { bottom: 10%; right: 10%; }
 
-/* Animation schwebend */
+/* Floating Animation */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
