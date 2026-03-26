@@ -63,10 +63,12 @@
   </section>
 
   <script>
-    function scrollToCheck() {
-      console.log("Scroll später zum Chaos-Check");
-    }
-  </script>
+  function scrollToCheck() {
+    document.getElementById("chaos-check").scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+</script>
 
 </body>
 </html>
