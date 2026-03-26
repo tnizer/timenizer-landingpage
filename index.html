@@ -4,28 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timenizer – Ordnung ins Chaos</title>
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Hero Section -->
   <section id="hero">
-    <h1>Die meisten Unternehmer haben kein Zeitproblem – sondern Chaos.</h1>
-    <p>Timenizer bringt Struktur in dein digitales Business – von Buchhaltung über Immocloud bis zu deinem Postfach.</p>
-    <button onclick="scrollToCheck()">Jetzt Chaos-Check starten</button>
+    <div class="container">
+      <h1>Die meisten Unternehmer haben kein Zeitproblem – sondern Chaos.</h1>
+      <p>Timenizer bringt Struktur in dein digitales Business – von Buchhaltung über Immocloud bis zu deinem Postfach.</p>
+      <button onclick="scrollToCheck()">Jetzt Chaos-Check starten</button>
+    </div>
   </section>
 
-  <!-- Chaos-Check Section -->
-  <section id="chaos-check">
-    <h2>Wie geordnet ist dein Business?</h2>
-    <label>E-Mails im Postfach:</label>
-    <input type="number" id="emails" placeholder="z. B. 2400">
-    <label>Anzahl genutzter Tools:</label>
-    <input type="number" id="tools" placeholder="z. B. 5">
-    <button onclick="calculateScore()">Score berechnen</button>
-    <p id="result"></p>
-  </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
