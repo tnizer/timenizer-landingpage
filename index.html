@@ -125,38 +125,47 @@
 </section>
 <script>
   
+<script>
 function calculateScore() {
   let emails = parseInt(document.getElementById('emails').value) || 0;
   let tools = parseInt(document.getElementById('tools').value) || 0;
   let docs = parseInt(document.getElementById('docs').value);
   let automation = parseInt(document.getElementById('automation').value);
 
-  let score = 100;
+  let chaos = 0;
 
-  score -= emails / 50;
-  score -= tools * 5;
-  score -= docs;
-  score -= automation;
+  // Chaos steigt mit:
+  chaos += emails / 50;
+  chaos += tools * 5;
+  chaos += docs;
+  chaos += automation;
 
-  score = Math.max(0, Math.round(score));
+  chaos = Math.min(100, Math.round(chaos));
 
   let text = "";
   let recommendation = "";
 
-  if (score > 70) {
-    text = "Du bist gut organisiert 👍";
-    recommendation = "Mit kleinen Optimierungen und gezielten KI-Automationen kannst du noch effizienter werden.";
-  } else if (score > 40) {
-    text = "Da ist noch einiges an Chaos 👀";
-    recommendation = "Mit klaren Strukturen und ersten Automationen kannst du dir sofort Zeit sparen.";
-  } else {
+  if (chaos < 30) {
+    text = "Sehr gut organisiert 👍";
+    recommendation = "Du hast dein Business im Griff. Mit gezielten KI-Automationen kannst du noch effizienter werden.";
+  } 
+  else if (chaos < 70) {
+    text = "Da sammelt sich Chaos 👀";
+    recommendation = "Einige Prozesse laufen noch unstrukturiert. Mit klaren Systemen und ersten Automationen kannst du dir sofort Zeit sparen.";
+  } 
+  else {
     text = "Dein Business steckt im Chaos 🔥";
-    recommendation = "Du verlierst aktuell massiv Zeit. Timenizer hilft dir, Struktur reinzubringen und Prozesse inklusive KI-Automationen aufzubauen.";
+    recommendation = "Du verlierst aktuell massiv Zeit durch fehlende Struktur. Timenizer hilft dir, Ordnung reinzubringen und Prozesse inklusive KI-Automationen aufzubauen.";
   }
 
-  document.getElementById("score-text").innerText = "Dein Chaos-Score: " + score + "%";
+  document.getElementById("score-text").innerText = "Dein Chaos-Score: " + chaos + "%";
   document.getElementById("recommendation").innerText = recommendation;
 
   document.getElementById("result-box").classList.remove("hidden");
+
+  // optional smooth scroll zum Ergebnis
+  document.getElementById("result-box").scrollIntoView({
+    behavior: "smooth"
+  });
 }
 </script>
