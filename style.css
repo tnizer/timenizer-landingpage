@@ -33,7 +33,7 @@ body {
 #hero button {
   font-weight: 600;
   font-size: 1rem;
-  background: #00C4CC; /* kräftiges Timenizer-Türkis */
+  background: #00CCB8; /* kräftiges Timenizer-Türkis */
   color: white;
   border: none;
   padding: 16px 36px;
@@ -43,7 +43,7 @@ body {
 }
 
 #hero button:hover {
-  background: #00A5A9; /* dunkleres Türkis beim Hover */
+  background: #00A99E; /* dunkleres Türkis beim Hover */
   transform: translateY(-2px);
 }
 
