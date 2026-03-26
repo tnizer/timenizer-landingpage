@@ -5,16 +5,31 @@ body {
   margin: 0;
 }
 
-/* Topbar */
-#topbar {
-  background: rgba(240, 244, 248, 0.7);
-  backdrop-filter: blur(6px);
-  padding: 15px;
-  text-align: center;
+/* Sticky Wrapper */
+.topbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
 }
 
+/* Modern Glass Topbar */
+#topbar {
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(20, 20, 20, 0.6); /* dunkler für weißes Logo */
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Logo */
 #topbar img {
-  height: 40px;
+  height: 50px;
 }
 
 /* Hero */
@@ -75,10 +90,17 @@ button:hover {
   position: relative;
 }
 
+/* Bild Hover wieder aktiv */
 .hero-right img {
   width: 100%;
   border-radius: 16px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-right img:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
 }
 
 /* Callouts */
@@ -86,8 +108,13 @@ button:hover {
   position: absolute;
   display: flex;
   align-items: center;
-  animation: float 5s ease-in-out infinite;
 }
+
+/* unterschiedliche Animationen */
+.c1 { animation: float1 5s ease-in-out infinite; }
+.c2 { animation: float2 6s ease-in-out infinite; }
+.c3 { animation: float1 7s ease-in-out infinite; }
+.c4 { animation: float2 5.5s ease-in-out infinite; }
 
 .callout-text {
   background: white;
@@ -99,7 +126,7 @@ button:hover {
   max-width: 180px;
 }
 
-/* Pfeil zeigt zur Bubble (nicht zum Bild) */
+/* Pfeil zeigt zur Bubble */
 .callout-arrow {
   width: 0;
   height: 0;
@@ -109,13 +136,19 @@ button:hover {
   margin-right: 6px;
 }
 
-/* Neue sichere Positionen (IM Bildbereich!) */
-.c1 { top: 10%; left: 10%; }
-.c2 { top: 60%; left: 5%; }
-.c3 { bottom: 10%; right: 10%; }
+/* Positionen rund ums Bild (KEIN LINKS!) */
+.c1 { top: -20px; left: 20%; }
+.c2 { top: 40%; right: -20px; }
+.c3 { bottom: -20px; right: 25%; }
+.c4 { top: 70%; right: 10%; }
 
-/* Floating Animation */
-@keyframes float {
+/* Animationen */
+@keyframes float1 {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
 }
