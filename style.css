@@ -300,46 +300,82 @@ input:focus, select:focus {
 /* MOBILE RESPONSIVE              */
 /* ============================= */
 @media (max-width: 768px) {
-  
-  /* Hero */
+
+  /* Hero: Bild oben, Text darunter */
   .hero-grid {
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: column; /* Bild oben */
+    align-items: center;    /* horizontal zentrieren */
     text-align: center;
+    gap: 20px; /* Abstand Bild ↔ Text */
+    margin-top: 10px; /* weniger Abstand nach Logo */
   }
 
   .hero-left h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 10px 0;
   }
 
   .hero-left p {
     font-size: 1rem;
+    margin-bottom: 20px;
   }
 
-  /* Chaos-Check */
+  .hero-right img {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 16px;
+  }
+
+  /* Chaos Check: alles zentrieren */
+  #chaos-check .container {
+    text-align: center;
+    margin: 0 auto;
+  }
+
   .chaos-wrapper {
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
   }
 
+  /* Check Grid: 1 Spalte */
   .check-grid {
-    grid-template-columns: 1fr; /* eine Spalte */
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
+  /* Inputs korrekt innerhalb der Felder */
+  input, select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* Weniger Weißraum zwischen Hero und Chaos-Check */
+  #chaos-check {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  /* Buttons volle Breite */
+  .primary-btn {
+    width: 100%;
+  }
+
+  /* Sidebar auf Mobile: unter den Fragen */
   #chaos-sidebar {
     width: 100%;
     position: relative;
     top: auto;
+    margin-top: 20px;
   }
 
-  /* Buttons und Inputs volle Breite */
-  input, select, .primary-btn {
-    width: 100%;
-  }
-
-  /* Fortschrittsbalken etwas höher */
+  /* Fortschrittsbalken etwas kleiner */
   .progress-bar {
-    height: 18px;
+    height: 16px;
   }
 }
