@@ -1,24 +1,53 @@
+/* Grundfonts */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  color: #2A2A2E;
+  background: #FFFFFF;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
-section {
-  padding: 50px;
-  text-align: center;
-}
-
+/* Hero */
 #hero {
-  background-color: #f0f4f8;
+  background-color: #F7F8FA; /* helles Grau, Timenizer-Style */
+  text-align: center;
+  padding: 100px 20px;
 }
 
-#chaos-check {
-  background-color: #ffffff;
+#hero h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
 }
 
-input {
-  margin: 10px;
-  padding: 5px;
-  width: 100px;
+#hero p {
+  font-weight: 400;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  color: #6E7075; /* sekundärer Text */
+}
+
+#hero button {
+  font-weight: 600;
+  font-size: 1rem;
+  background: #1A4DBF; /* seriöser Akzentton */
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#hero button:hover {
+  background: #163EA6;
+}
+
+/* Container für Content-Breite */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
