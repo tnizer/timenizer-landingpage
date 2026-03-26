@@ -1,11 +1,22 @@
-/* Grundfonts & Body */
+/* Fonts & Body */
 body {
   font-family: 'Inter', sans-serif;
-  color: #1D1D1F; /* dunkles Anthrazit */
+  color: #1D1D1F;
   background: #FFFFFF;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+}
+
+/* Logo-Balken oben */
+#topbar {
+  background: rgba(240, 244, 248, 0.85); /* hellgrau, leicht durchsichtig */
+  padding: 15px 20px;
+  text-align: center;
+}
+
+#topbar img {
+  max-height: 40px;
 }
 
 /* Hero/Header */
@@ -35,7 +46,7 @@ body {
 }
 
 .highlight {
-  color: #00CCB8; /* Timenizer Türkis */
+  color: #00CCB8;
 }
 
 .hero-left p {
@@ -48,7 +59,7 @@ body {
 #hero button {
   font-weight: 600;
   font-size: 1rem;
-  background: #00CCB8; /* Türkis */
+  background: #00CCB8;
   color: white;
   border: none;
   padding: 16px 36px;
@@ -58,22 +69,65 @@ body {
 }
 
 #hero button:hover {
-  background: #00A99E; /* dunkleres Türkis beim Hover */
+  background: #00A99E;
   transform: translateY(-2px);
 }
 
+/* Rechte Seite (Bild + Callouts) */
 .hero-right {
   flex: 1;
   text-align: center;
+  position: relative;
 }
 
 .hero-right img {
   max-width: 100%;
-  border-radius: 20px;
+  border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
 .hero-right img:hover {
   transform: translateY(-5px);
+}
+
+/* Callouts */
+.callout {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  animation: float 4s ease-in-out infinite; /* schwebend */
+}
+
+.callout-text {
+  background: #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1D1D1F;
+  max-width: 180px;
+  text-align: center;
+}
+
+/* Pfeile */
+.callout-arrow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #00CCB8; /* Türkis */
+  margin-right: 8px;
+}
+
+/* Positionierung der Callouts */
+.callout1 { top: 15%; left: -25%; }
+.callout2 { top: 50%; left: -30%; }
+.callout3 { bottom: 15%; left: -28%; }
+
+/* Animation schwebend */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
 }
