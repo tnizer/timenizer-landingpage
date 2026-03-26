@@ -69,50 +69,52 @@
       <h2>Wie organisiert ist dein Business wirklich?</h2>
       <p class="subtitle">Finde in 30 Sekunden heraus, wo du gerade stehst.</p>
 
-      <div class="check-grid">
+      <!-- Flex Container für Fragen + Sidebar -->
+      <div class="chaos-wrapper">
 
-        <div class="question">
-          <label>Wie viele ungelesene E-Mails hast du aktuell?</label>
-          <input type="number" id="emails" placeholder="z. B. 1200">
+        <!-- Links: Fragen -->
+        <div class="check-grid">
+          <div class="question">
+            <label>Wie viele ungelesene E-Mails hast du aktuell?</label>
+            <input type="number" id="emails" placeholder="z. B. 1200">
+          </div>
+
+          <div class="question">
+            <label>Wie gut sind deine Belege & Dokumente organisiert?</label>
+            <select id="docs">
+              <option value="0">Perfekt strukturiert</option>
+              <option value="20">Teilweise chaotisch</option>
+              <option value="40">Ich suche ständig Dinge</option>
+            </select>
+          </div>
+
+          <div class="question">
+            <label>Wie viele Tools nutzt du parallel?</label>
+            <input type="number" id="tools" placeholder="z. B. 6">
+          </div>
+
+          <div class="question">
+            <label>Wie viel läuft bei dir schon automatisiert?</label>
+            <select id="automation">
+              <option value="0">Sehr viel automatisiert</option>
+              <option value="20">Teilweise</option>
+              <option value="40">Fast nichts</option>
+            </select>
+          </div>
         </div>
 
-        <div class="question">
-          <label>Wie gut sind deine Belege & Dokumente organisiert?</label>
-          <select id="docs">
-            <option value="0">Perfekt strukturiert</option>
-            <option value="20">Teilweise chaotisch</option>
-            <option value="40">Ich suche ständig Dinge</option>
-          </select>
+        <!-- Rechts: Score + Fortschrittsbalken -->
+        <div id="chaos-sidebar">
+          <h3 id="score-text">Dein Chaos-Score: 0%</h3>
+          <div id="chaos-progress">
+            <label>Dein Chaos-Level:</label>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:0%"></div>
+            </div>
+          </div>
+          <p id="recommendation"></p>
         </div>
 
-        <div class="question">
-          <label>Wie viele Tools nutzt du parallel?</label>
-          <input type="number" id="tools" placeholder="z. B. 6">
-        </div>
-
-        <div class="question">
-          <label>Wie viel läuft bei dir schon automatisiert?</label>
-          <select id="automation">
-            <option value="0">Sehr viel automatisiert</option>
-            <option value="20">Teilweise</option>
-            <option value="40">Fast nichts</option>
-          </select>
-        </div>
-
-      </div>
-
-      <!-- Live Chaos-Level Fortschrittsbalken -->
-      <div id="chaos-progress">
-        <label>Dein Chaos-Level:</label>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width:0%"></div>
-        </div>
-      </div>
-
-      <!-- Ergebnis Box -->
-      <div id="result-box" class="hidden">
-        <h3 id="score-text"></h3>
-        <p id="recommendation"></p>
       </div>
 
     </div>
@@ -142,7 +144,7 @@
       // Fortschrittsbalken aktualisieren
       document.querySelector('.progress-fill').style.width = chaos + '%';
 
-      // Ergebnis-Box aktualisieren
+      // Score + Empfehlung
       document.getElementById("score-text").innerText = "Dein Chaos-Score: " + chaos + "%";
 
       let recommendation = "";
@@ -155,10 +157,9 @@
       }
 
       document.getElementById("recommendation").innerText = recommendation;
-      document.getElementById("result-box").classList.remove("hidden");
     }
 
-    // Event-Listener auf alle Inputs/Selects
+    // Live-Update Eventlistener
     document.querySelectorAll('#chaos-check input, #chaos-check select').forEach(el => {
       el.addEventListener('input', updateChaosScore);
       el.addEventListener('change', updateChaosScore);
