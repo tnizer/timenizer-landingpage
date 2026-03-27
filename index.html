@@ -136,23 +136,23 @@
   </section>
 
   <!-- ============================= -->
-  <!-- KLEINER VISUELLER ÜBERGANG   -->
+  <!-- DIVIDER MIT FUNKTION         -->
   <!-- ============================= -->
   <section class="section-divider" aria-hidden="true">
     <div class="container divider-inner">
-      <div class="scroll-indicator">↓</div>
+      <div class="scroll-indicator" onclick="scrollToSolution()" title="Zur Lösung springen">
+        <span>↓</span>
+      </div>
     </div>
   </section>
 
   <!-- ============================= -->
   <!-- LÖSUNGS-ABSCHNITT            -->
-  <!-- FARBE + TRANSPARENTES PANEL  -->
   <!-- ============================= -->
   <section id="solution-benefits">
     <div class="container">
       <div class="solution-shell">
 
-        <!-- HEADER -->
         <div class="solution-header">
           <p class="section-kicker">Die Lösung</p>
 
@@ -165,7 +165,6 @@
           </p>
         </div>
 
-        <!-- BENEFIT-KARTEN -->
         <div class="benefits-grid">
 
           <div class="benefit-card">
@@ -231,14 +230,20 @@
   <!-- JAVASCRIPT                   -->
   <!-- ============================= -->
   <script>
-    /* Smooth Scroll vom Hero zum Chaos-Check */
     function scrollToCheck() {
       document.getElementById("chaos-check").scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "start"
       });
     }
 
-    /* Chaos-Score berechnen */
+    function scrollToSolution() {
+      document.getElementById("solution-benefits").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
     function updateChaosScore() {
       let emails = parseInt(document.getElementById('emails').value) || 0;
       let tools = parseInt(document.getElementById('tools').value) || 0;
@@ -252,13 +257,9 @@
       chaos += automation;
       chaos = Math.min(100, Math.round(chaos));
 
-      /* Progress Bar */
       document.querySelector('.progress-fill').style.width = chaos + '%';
-
-      /* Score Text */
       document.getElementById("score-text").innerText = "Dein Chaos-Score: " + chaos + "%";
 
-      /* Empfehlung */
       let recommendation = "";
 
       if (chaos < 30) {
@@ -272,7 +273,6 @@
       document.getElementById("recommendation").innerText = recommendation;
     }
 
-    /* Live-Update für Inputs & Selects */
     document.querySelectorAll('#chaos-check input, #chaos-check select').forEach(el => {
       el.addEventListener('input', updateChaosScore);
       el.addEventListener('change', updateChaosScore);
