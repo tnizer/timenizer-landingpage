@@ -28,7 +28,6 @@
   <section id="hero">
     <div class="container hero-grid">
 
-      <!-- HERO TEXT -->
       <div class="hero-left">
         <h1>
           Die meisten Unternehmer haben kein
@@ -44,7 +43,6 @@
         <button onclick="scrollToCheck()">Jetzt Chaos-Check starten</button>
       </div>
 
-      <!-- HERO IMAGE + FLOATING MESSAGES -->
       <div class="hero-right">
         <img src="dashboard-mockup.png" alt="Dashboard">
 
@@ -83,9 +81,7 @@
 
       <div class="chaos-wrapper">
 
-        <!-- FORMULAR / FRAGEN -->
         <div class="check-grid">
-
           <div class="question">
             <label for="emails">Wie viele ungelesene E-Mails hast du aktuell?</label>
             <input type="number" id="emails" placeholder="z. B. 1200">
@@ -113,10 +109,8 @@
               <option value="40">Fast nichts</option>
             </select>
           </div>
-
         </div>
 
-        <!-- SCORE SIDEBAR -->
         <div id="chaos-sidebar">
           <h3 id="score-text">Dein Chaos-Score: 0%</h3>
 
@@ -136,7 +130,7 @@
   </section>
 
   <!-- ============================= -->
-  <!-- DIVIDER MIT FUNKTION         -->
+  <!-- DIVIDER                      -->
   <!-- ============================= -->
   <section class="section-divider" aria-hidden="true">
     <div class="container divider-inner">
@@ -226,51 +220,155 @@
     </div>
   </section>
 
-<!-- ============================= -->
-<!-- PROBLEM: FALSCHE LÖSUNG      -->
-<!-- ============================= -->
-<section id="false-solution">
-  <div class="container">
+  <!-- ============================= -->
+  <!-- PROBLEM-ABSCHNITT            -->
+  <!-- MIT DIAGRAMM-KARTEN          -->
+  <!-- ============================= -->
+  <section id="false-solution">
+    <div class="container">
 
-    <h2>
-      Wieso Teilzeitkräfte und Aushilfen<br>
-      nicht deine Probleme lösen…
-    </h2>
-
-    <div class="false-grid">
-
-      <div class="false-card">
-        <div class="false-icon">⏱️</div>
-        <h3>Starre Arbeitszeiten</h3>
-        <p>
-          Teilzeitkräfte passen oft nicht zu deinem dynamischen Alltag –
-          Aufgaben bleiben liegen oder stauen sich.
-        </p>
+      <div class="false-header">
+        <h2>
+          Wieso Teilzeitkräfte und Aushilfen
+          <br>
+          nicht deine Probleme lösen…
+        </h2>
       </div>
 
-      <div class="false-card">
-        <div class="false-icon">💸</div>
-        <h3>Fixkosten & Verpflichtungen</h3>
-        <p>
-          Verträge, Gehälter und Verantwortung steigen –
-          unabhängig davon, ob wirklich Bedarf besteht.
-        </p>
-      </div>
+      <div class="false-grid">
 
-      <div class="false-card">
-        <div class="false-icon">📉</div>
-        <h3>Stillstand statt Wachstum</h3>
-        <p>
-          Krankheit, Urlaub oder fehlende Skills bremsen dein Business
-          genau dann, wenn du wachsen willst.
-        </p>
-      </div>
+        <!-- Karte 1 -->
+        <article class="false-card">
+          <div class="false-visual">
+            <svg viewBox="0 0 420 220" role="img" aria-label="Diagramm zu starren Arbeitszeiten">
+              <defs>
+                <linearGradient id="barGlowA" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#3EF0F2" stop-opacity="1"/>
+                  <stop offset="100%" stop-color="#3EF0F2" stop-opacity="0.1"/>
+                </linearGradient>
+                <linearGradient id="barGlowB" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FF3B6B" stop-opacity="1"/>
+                  <stop offset="100%" stop-color="#FF3B6B" stop-opacity="0.12"/>
+                </linearGradient>
+                <filter id="softGlow1">
+                  <feGaussianBlur stdDeviation="7" result="blur"/>
+                  <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
 
+              <text x="100" y="28" fill="#F3FBFB" font-size="20" font-style="italic" font-weight="700">ZEIT</text>
+              <text x="230" y="160" fill="#F3FBFB" font-size="20" font-style="italic" font-weight="700">EFFIZIENZ</text>
+
+              <rect x="70" y="42" width="92" height="150" rx="18" fill="none" stroke="#3EF0F2" stroke-width="4" filter="url(#softGlow1)"/>
+              <rect x="205" y="128" width="96" height="64" rx="18" fill="none" stroke="#FF3B6B" stroke-width="4" filter="url(#softGlow1)"/>
+
+              <rect x="70" y="42" width="92" height="150" rx="18" fill="url(#barGlowA)" opacity="0.18"/>
+              <rect x="205" y="128" width="96" height="64" rx="18" fill="url(#barGlowB)" opacity="0.14"/>
+            </svg>
+          </div>
+
+          <div class="false-content">
+            <h3>Starre Arbeitszeiten</h3>
+            <p>
+              Teilzeitkräfte passen oft nicht zu deinem dynamischen Alltag –
+              Aufgaben bleiben liegen oder stauen sich.
+            </p>
+          </div>
+        </article>
+
+        <!-- Karte 2 -->
+        <article class="false-card">
+          <div class="false-visual">
+            <svg viewBox="0 0 420 220" role="img" aria-label="Diagramm zu Fixkosten und Verpflichtungen">
+              <defs>
+                <filter id="softGlow2">
+                  <feGaussianBlur stdDeviation="6" result="blur"/>
+                  <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <rect x="26" y="40" width="320" height="74" rx="18" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.08)"/>
+              <rect x="118" y="132" width="270" height="74" rx="18" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.08)"/>
+
+              <text x="66" y="86" fill="#F5FCFC" font-size="26">Versicherungen...</text>
+              <text x="212" y="178" fill="#F5FCFC" font-size="26">Urlaubsgeld...</text>
+
+              <rect x="304" y="52" width="66" height="50" rx="14" fill="#58DDD7" filter="url(#softGlow2)"/>
+              <text x="319" y="87" fill="#FFFFFF" font-size="24" font-weight="700">€€</text>
+
+              <rect x="136" y="144" width="66" height="50" rx="14" fill="#58DDD7" filter="url(#softGlow2)"/>
+              <text x="151" y="179" fill="#FFFFFF" font-size="24" font-weight="700">€€</text>
+
+              <path d="M380 88 l14 14 l0 -10 l14 0" fill="none" stroke="#FF3B6B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M72 168 l14 14 l0 -10 l14 0" fill="none" stroke="#FF3B6B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="false-content">
+            <h3>Fixkosten & Verpflichtungen</h3>
+            <p>
+              Verträge, Gehälter und Verantwortung steigen –
+              unabhängig davon, ob wirklich Bedarf besteht.
+            </p>
+          </div>
+        </article>
+
+        <!-- Karte 3 -->
+        <article class="false-card">
+          <div class="false-visual">
+            <svg viewBox="0 0 420 220" role="img" aria-label="Diagramm zu Stillstand statt Wachstum">
+              <defs>
+                <filter id="softGlow3">
+                  <feGaussianBlur stdDeviation="5" result="blur"/>
+                  <feMerge>
+                    <feMergeNode in="blur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <line x1="42" y1="180" x2="360" y2="180" stroke="rgba(255,255,255,0.42)" stroke-width="4" stroke-dasharray="8 8"/>
+              <line x1="42" y1="180" x2="42" y2="36" stroke="rgba(255,255,255,0.42)" stroke-width="4" stroke-dasharray="8 8"/>
+
+              <path d="M352 170 l14 10 l-14 10" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 44 l10 -14 l10 14" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <circle cx="42" cy="180" r="9" fill="#F5FCFC"/>
+
+              <path d="M42 180 C120 172, 220 155, 320 122" fill="none" stroke="#FF2F63" stroke-width="5" filter="url(#softGlow3)"/>
+              <path d="M42 180 C120 178, 220 170, 320 82" fill="none" stroke="#35F0F0" stroke-width="5" filter="url(#softGlow3)"/>
+
+              <circle cx="320" cy="122" r="17" fill="none" stroke="#F5FCFC" stroke-width="4" stroke-dasharray="7 7"/>
+              <circle cx="320" cy="82" r="17" fill="none" stroke="#35F0F0" stroke-width="4" stroke-dasharray="7 7"/>
+              <circle cx="260" cy="112" r="7" fill="#FFD400"/>
+
+              <path d="M250 86 C255 80, 275 78, 286 92" fill="none" stroke="#FFD400" stroke-width="4" stroke-linecap="round"/>
+              <path d="M284 86 l4 10 l-10 -1" fill="none" stroke="#FFD400" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <path d="M324 60 l12 0 l-6 -12" fill="none" stroke="#35F0F0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M328 134 l12 0 l-6 -12" fill="none" stroke="#FF2F63" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="false-content">
+            <h3>Stillstand statt Wachstum</h3>
+            <p>
+              Krankheit, Urlaub oder fehlende Skills bremsen dein Business
+              genau dann, wenn du wachsen willst.
+            </p>
+          </div>
+        </article>
+
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
-  
   <!-- ============================= -->
   <!-- JAVASCRIPT                   -->
   <!-- ============================= -->
