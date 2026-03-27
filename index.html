@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <!-- ============================= -->
+  <!-- META / TITLE / FONTS / CSS   -->
+  <!-- ============================= -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Timenizer – Ordnung ins Chaos</title>
@@ -10,30 +13,38 @@
 
 <body>
 
-  <!-- Sticky Logo Bar -->
+  <!-- ============================= -->
+  <!-- STICKY TOPBAR / LOGO         -->
+  <!-- ============================= -->
   <div class="topbar-wrapper">
     <div id="topbar">
       <img src="Timenizer_Logo.png" alt="Timenizer Logo">
     </div>
   </div>
 
-  <!-- Hero -->
+  <!-- ============================= -->
+  <!-- HERO SECTION                 -->
+  <!-- ============================= -->
   <section id="hero">
     <div class="container hero-grid">
 
+      <!-- HERO TEXT -->
       <div class="hero-left">
         <h1>
-          Die meisten Unternehmer haben kein 
-          <span class="highlight">Zeitproblem</span> – 
+          Die meisten Unternehmer haben kein
+          <span class="highlight">Zeitproblem</span> –
           sondern <span class="highlight">Chaos</span>.
         </h1>
+
         <p>
-          Timenizer bringt Struktur in dein digitales Business – 
+          Timenizer bringt Struktur in dein digitales Business –
           damit du dich wieder auf das konzentrieren kannst, was wirklich zählt.
         </p>
+
         <button onclick="scrollToCheck()">Jetzt Chaos-Check starten</button>
       </div>
 
+      <!-- HERO IMAGE + FLOATING MESSAGES -->
       <div class="hero-right">
         <img src="dashboard-mockup.png" alt="Dashboard">
 
@@ -56,31 +67,32 @@
           <div class="callout-arrow"></div>
           <div class="callout-text">„Ich verliere komplett den Überblick…“</div>
         </div>
-
       </div>
 
     </div>
   </section>
 
-  <!-- Chaos-Check -->
+  <!-- ============================= -->
+  <!-- CHAOS-CHECK SECTION          -->
+  <!-- ============================= -->
   <section id="chaos-check">
     <div class="container">
 
       <h2>Wie organisiert ist dein Business wirklich?</h2>
       <p class="subtitle">Finde in 30 Sekunden heraus, wo du gerade stehst.</p>
 
-      <!-- Flex Container für Fragen + Sidebar -->
       <div class="chaos-wrapper">
 
-        <!-- Links: Fragen -->
+        <!-- FORMULAR / FRAGEN -->
         <div class="check-grid">
+
           <div class="question">
-            <label>Wie viele ungelesene E-Mails hast du aktuell?</label>
+            <label for="emails">Wie viele ungelesene E-Mails hast du aktuell?</label>
             <input type="number" id="emails" placeholder="z. B. 1200">
           </div>
 
           <div class="question">
-            <label>Wie gut sind deine Belege & Dokumente organisiert?</label>
+            <label for="docs">Wie gut sind deine Belege & Dokumente organisiert?</label>
             <select id="docs">
               <option value="0">Perfekt strukturiert</option>
               <option value="20">Teilweise chaotisch</option>
@@ -89,29 +101,32 @@
           </div>
 
           <div class="question">
-            <label>Wie viele Tools nutzt du parallel?</label>
+            <label for="tools">Wie viele Tools nutzt du parallel?</label>
             <input type="number" id="tools" placeholder="z. B. 6">
           </div>
 
           <div class="question">
-            <label>Wie viel läuft bei dir schon automatisiert?</label>
+            <label for="automation">Wie viel läuft bei dir schon automatisiert?</label>
             <select id="automation">
               <option value="0">Sehr viel automatisiert</option>
               <option value="20">Teilweise</option>
               <option value="40">Fast nichts</option>
             </select>
           </div>
+
         </div>
 
-        <!-- Rechts: Score + Fortschrittsbalken -->
+        <!-- SCORE SIDEBAR -->
         <div id="chaos-sidebar">
           <h3 id="score-text">Dein Chaos-Score: 0%</h3>
+
           <div id="chaos-progress">
-            <label>Dein Chaos-Level:</label>
+            <label class="progress-label">Dein Chaos-Level:</label>
             <div class="progress-bar">
-              <div class="progress-fill" style="width:0%"></div>
+              <div class="progress-fill" style="width: 0%"></div>
             </div>
           </div>
+
           <p id="recommendation"></p>
         </div>
 
@@ -120,14 +135,72 @@
     </div>
   </section>
 
-  <!-- SCRIPTS -->
+  <!-- ============================= -->
+  <!-- NÄCHSTER ABSCHNITT: LÖSUNG   -->
+  <!-- ============================= -->
+  <section id="solution-benefits">
+    <div class="container">
+
+      <p class="section-kicker">Die Lösung</p>
+
+      <h2>Chaos kostet dich nicht nur Zeit – sondern Umsatz.</h2>
+
+      <p class="section-intro">
+        Timenizer nimmt dir die digitalen Backoffice-Aufgaben ab, die täglich Fokus,
+        Energie und Wachstum fressen.
+      </p>
+
+      <div class="benefits-grid">
+
+        <div class="benefit-card">
+          <div class="benefit-icon">✓</div>
+          <h3>Weniger Admin-Chaos</h3>
+          <p>
+            Rechnungen, Belege, Mails und Dokumente werden endlich sauber organisiert.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">✓</div>
+          <h3>Mehr Fokus auf Umsatz</h3>
+          <p>
+            Du arbeitest wieder an Wachstum, Vertrieb und Strategie statt an Kleinkram.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">✓</div>
+          <h3>Feste deutsche Assistenz</h3>
+          <p>
+            Du bekommst verlässliche Unterstützung aus einem professionellen Team.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">✓</div>
+          <h3>Flexibel statt Vollzeit-Fixkosten</h3>
+          <p>
+            Genau die Unterstützung, die du brauchst – ohne unnötigen Overhead.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- JAVASCRIPT                   -->
+  <!-- ============================= -->
   <script>
+    /* Smooth Scroll vom Hero zum Chaos-Check */
     function scrollToCheck() {
       document.getElementById("chaos-check").scrollIntoView({
         behavior: "smooth"
       });
     }
 
+    /* Chaos-Score berechnen */
     function updateChaosScore() {
       let emails = parseInt(document.getElementById('emails').value) || 0;
       let tools = parseInt(document.getElementById('tools').value) || 0;
@@ -141,13 +214,15 @@
       chaos += automation;
       chaos = Math.min(100, Math.round(chaos));
 
-      // Fortschrittsbalken aktualisieren
+      /* Progress Bar */
       document.querySelector('.progress-fill').style.width = chaos + '%';
 
-      // Score + Empfehlung
+      /* Score Text */
       document.getElementById("score-text").innerText = "Dein Chaos-Score: " + chaos + "%";
 
+      /* Empfehlung */
       let recommendation = "";
+
       if (chaos < 30) {
         recommendation = "Sehr gut organisiert 👍 Mit gezielten KI-Automationen kannst du noch effizienter werden.";
       } else if (chaos < 70) {
@@ -159,7 +234,7 @@
       document.getElementById("recommendation").innerText = recommendation;
     }
 
-    // Live-Update Eventlistener
+    /* Live-Update für Inputs & Selects */
     document.querySelectorAll('#chaos-check input, #chaos-check select').forEach(el => {
       el.addEventListener('input', updateChaosScore);
       el.addEventListener('change', updateChaosScore);
