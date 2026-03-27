@@ -22,7 +22,7 @@ img {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -31,22 +31,23 @@ img {
 /* ============================= */
 button,
 .primary-btn {
-  background: #00CCB8;
+  background: linear-gradient(135deg, #00CCB8 0%, #11D8C4 100%);
   color: white;
   border: none;
   padding: 16px 32px;
-  border-radius: 10px;
-  font-weight: 600;
+  border-radius: 12px;
+  font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
   transition: 0.3s;
+  box-shadow: 0 14px 28px rgba(0, 204, 184, 0.20);
 }
 
 button:hover,
 .primary-btn:hover {
-  background: #00A99E;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 204, 184, 0.20);
+  box-shadow: 0 18px 34px rgba(0, 204, 184, 0.28);
+  background: linear-gradient(135deg, #00BDAA 0%, #0FD2BE 100%);
 }
 
 /* ============================= */
@@ -66,11 +67,12 @@ button:hover,
   max-width: 1200px;
   background: rgba(0, 204, 184, 0.10);
   backdrop-filter: blur(14px);
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 10px 20px;
   display: flex;
   justify-content: flex-end;
   border: 1px solid rgba(0, 204, 184, 0.16);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
 }
 
 #topbar img {
@@ -82,13 +84,28 @@ button:hover,
 /* HERO SECTION                 */
 /* ============================= */
 #hero {
-  padding: 90px 20px 96px;
+  position: relative;
+  padding: 96px 20px 150px;
+  overflow: hidden;
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(249,251,251,0.92) 75%, #F9FBFB 100%);
+  pointer-events: none;
 }
 
 .hero-grid {
   display: flex;
   align-items: center;
   gap: 60px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-left {
@@ -97,7 +114,7 @@ button:hover,
 
 .hero-left h1 {
   font-size: 3rem;
-  line-height: 1.15;
+  line-height: 1.12;
   margin: 0 0 20px;
 }
 
@@ -122,18 +139,17 @@ button:hover,
 
 .hero-right img {
   width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.10);
+  border-radius: 18px;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.12);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: block;
 }
 
 .hero-right img:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.16);
 }
 
-/* Floating Callouts */
 .callout {
   position: absolute;
   display: flex;
@@ -147,13 +163,13 @@ button:hover,
 .c4 { animation: float2 5.5s ease-in-out infinite; }
 
 .callout-text {
-  background: white;
+  background: rgba(255, 255, 255, 0.96);
   padding: 10px 14px;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 0.85rem;
   font-weight: 500;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  max-width: 180px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  max-width: 190px;
 }
 
 .callout-arrow {
@@ -165,26 +181,26 @@ button:hover,
   margin-right: 6px;
 }
 
-.c1 { top: -20px; left: 20%; }
-.c2 { top: 40%; right: -20px; }
-.c3 { bottom: -20px; right: 25%; }
-.c4 { top: 70%; right: 10%; }
+.c1 { top: -20px; left: 22%; }
+.c2 { top: 42%; right: -20px; }
+.c3 { bottom: -18px; right: 20%; }
+.c4 { top: 72%; right: 12%; }
 
 @keyframes float1 {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  50% { transform: translateY(-7px); }
 }
 
 @keyframes float2 {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+  50% { transform: translateY(7px); }
 }
 
 /* ============================= */
 /* CHAOS-CHECK SECTION          */
 /* ============================= */
 #chaos-check {
-  padding: 88px 20px 48px;
+  padding: 110px 20px 48px;
   background: #F9FBFB;
   text-align: center;
 }
@@ -200,7 +216,6 @@ button:hover,
   font-size: 1.1rem;
 }
 
-/* Wrapper für Formular + Sidebar */
 .chaos-wrapper {
   display: flex;
   align-items: flex-start;
@@ -210,7 +225,6 @@ button:hover,
   gap: 40px;
 }
 
-/* Fragen Grid */
 .check-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -218,7 +232,6 @@ button:hover,
   flex: 1;
 }
 
-/* Einzelne Frage */
 .question {
   text-align: left;
 }
@@ -230,7 +243,6 @@ button:hover,
   font-size: 0.95rem;
 }
 
-/* Formularfelder */
 input,
 select {
   width: 100%;
@@ -314,11 +326,16 @@ select:focus {
 }
 
 /* ============================= */
-/* SECTION DIVIDER / ARROW      */
+/* DIVIDER / FUNKTIONIERENDER    */
+/* SPRUNG ZUR LÖSUNG            */
 /* ============================= */
 .section-divider {
-  background: linear-gradient(180deg, #F9FBFB 0%, #EAF9F6 100%);
-  padding: 10px 20px 0;
+  position: relative;
+  background:
+    radial-gradient(circle at 15% 50%, rgba(0, 204, 184, 0.15), transparent 20%),
+    radial-gradient(circle at 85% 50%, rgba(95, 145, 255, 0.14), transparent 22%),
+    linear-gradient(180deg, #F9FBFB 0%, #EAF9F6 100%);
+  padding: 18px 20px 6px;
 }
 
 .divider-inner {
@@ -328,32 +345,66 @@ select:focus {
 }
 
 .scroll-indicator {
-  width: 52px;
-  height: 52px;
+  width: 62px;
+  height: 62px;
   border-radius: 999px;
   border: 1px solid rgba(0, 204, 184, 0.22);
   background: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
   color: #00CCB8;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: pulseArrow 2.2s ease-in-out infinite;
+}
+
+.scroll-indicator:hover {
+  transform: translateY(2px) scale(1.04);
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.scroll-indicator span {
+  display: inline-block;
+  animation: arrowBounce 1.6s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+@keyframes pulseArrow {
+  0%, 100% {
+    box-shadow:
+      0 14px 34px rgba(0, 0, 0, 0.08),
+      0 0 0 0 rgba(0, 204, 184, 0.18);
+  }
+  50% {
+    box-shadow:
+      0 14px 34px rgba(0, 0, 0, 0.08),
+      0 0 0 12px rgba(0, 204, 184, 0.00);
+  }
 }
 
 /* ============================= */
 /* LÖSUNGS-ABSCHNITT            */
-/* FARBE + GLASS PANEL          */
 /* ============================= */
 #solution-benefits {
   position: relative;
-  padding: 36px 20px 96px;
+  padding: 22px 20px 88px;
   overflow: hidden;
   background:
-    radial-gradient(circle at top left, rgba(0, 204, 184, 0.20), transparent 30%),
-    radial-gradient(circle at top right, rgba(95, 145, 255, 0.18), transparent 28%),
-    linear-gradient(135deg, #DFF8F4 0%, #EAF7FF 50%, #F4F7FF 100%);
+    radial-gradient(circle at top left, rgba(0, 204, 184, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(95, 145, 255, 0.16), transparent 28%),
+    linear-gradient(135deg, #DFF8F4 0%, #EAF7FF 52%, #F4F7FF 100%);
 }
 
 #solution-benefits::before {
@@ -361,26 +412,40 @@ select:focus {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.35), transparent 18%),
-    radial-gradient(circle at 80% 15%, rgba(255, 255, 255, 0.28), transparent 15%);
+    radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.45), transparent 16%),
+    radial-gradient(circle at 82% 16%, rgba(255, 255, 255, 0.35), transparent 14%),
+    linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0));
   pointer-events: none;
 }
 
 .solution-shell {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.60);
+  background: rgba(255, 255, 255, 0.58);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  border-radius: 28px;
-  padding: 48px 42px;
-  box-shadow: 0 25px 80px rgba(46, 74, 92, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 34px;
+  padding: 42px 34px 30px;
+  box-shadow:
+    0 28px 80px rgba(46, 74, 92, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.70);
+}
+
+.solution-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 34px;
+  background: linear-gradient(120deg, rgba(255,255,255,0.28), transparent 28%, transparent 72%, rgba(255,255,255,0.18));
+  pointer-events: none;
 }
 
 .solution-header {
+  position: relative;
   text-align: center;
-  max-width: 920px;
-  margin: 0 auto 36px;
+  max-width: 900px;
+  margin: 0 auto 28px;
+  z-index: 1;
 }
 
 .section-kicker {
@@ -388,15 +453,15 @@ select:focus {
   font-size: 1rem;
   font-weight: 700;
   color: #00BFAE;
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   letter-spacing: 0.02em;
 }
 
 #solution-benefits h2 {
-  font-size: clamp(2.4rem, 4vw, 4rem);
-  line-height: 1.08;
+  font-size: clamp(2.6rem, 3.6vw, 3.7rem);
+  line-height: 1.06;
   letter-spacing: -0.03em;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: #1D1D1F;
   text-wrap: balance;
 }
@@ -404,62 +469,85 @@ select:focus {
 .section-intro {
   max-width: 760px;
   margin: 0 auto;
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.14rem;
+  line-height: 1.55;
   color: #61646B;
 }
 
 .benefits-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 .benefit-card {
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.78));
+  border: 1px solid rgba(255, 255, 255, 0.82);
   border-radius: 22px;
-  padding: 26px 24px;
+  padding: 20px 20px 18px;
   text-align: left;
-  box-shadow: 0 18px 40px rgba(21, 36, 50, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow:
+    0 16px 36px rgba(21, 36, 50, 0.07),
+    inset 0 1px 0 rgba(255,255,255,0.75);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  min-height: 212px;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -30px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(255,255,255,0.55), rgba(255,255,255,0));
+  pointer-events: none;
 }
 
 .benefit-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 24px 46px rgba(21, 36, 50, 0.12);
+  box-shadow:
+    0 22px 42px rgba(21, 36, 50, 0.10),
+    inset 0 1px 0 rgba(255,255,255,0.82);
+  border-color: rgba(255,255,255,0.95);
 }
 
 .benefit-icon {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(0, 204, 184, 0.18), rgba(95, 145, 255, 0.14));
+  background: linear-gradient(135deg, rgba(0, 204, 184, 0.18), rgba(95, 145, 255, 0.12));
   color: #00BFAE;
   font-weight: 800;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   font-size: 1rem;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.65);
 }
 
 .benefit-card h3 {
-  font-size: 1.22rem;
+  font-size: 1rem;
   line-height: 1.25;
-  margin: 0 0 10px;
+  margin: 0 0 9px;
   color: #1D1D1F;
 }
 
 .benefit-card p {
-  font-size: 1rem;
-  line-height: 1.65;
+  font-size: 0.95rem;
+  line-height: 1.55;
   color: #646872;
   margin: 0;
 }
 
 /* ============================= */
-/* MOBILE RESPONSIVE            */
+/* TABLET                       */
 /* ============================= */
 @media (max-width: 992px) {
   .benefits-grid {
@@ -467,12 +555,14 @@ select:focus {
   }
 
   #solution-benefits h2 {
-    font-size: clamp(2.2rem, 5vw, 3.3rem);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
   }
 }
 
+/* ============================= */
+/* MOBILE RESPONSIVE            */
+/* ============================= */
 @media (max-width: 768px) {
-  /* Topbar */
   .topbar-wrapper {
     padding-top: 10px;
   }
@@ -487,9 +577,12 @@ select:focus {
     height: 44px;
   }
 
-  /* Hero */
   #hero {
-    padding: 24px 16px 48px;
+    padding: 24px 16px 72px;
+  }
+
+  #hero::after {
+    height: 72px;
   }
 
   .hero-grid {
@@ -566,7 +659,6 @@ select:focus {
     top: auto;
   }
 
-  /* Chaos Check */
   #chaos-check {
     padding: 56px 16px 30px;
   }
@@ -635,29 +727,31 @@ select:focus {
     width: 100%;
   }
 
-  /* Divider */
   .section-divider {
     padding: 6px 16px 0;
   }
 
   .scroll-indicator {
-    width: 46px;
-    height: 46px;
+    width: 50px;
+    height: 50px;
     font-size: 1.2rem;
   }
 
-  /* Lösungsabschnitt */
   #solution-benefits {
-    padding: 24px 16px 56px;
+    padding: 20px 16px 56px;
   }
 
   .solution-shell {
-    padding: 28px 18px;
-    border-radius: 22px;
+    padding: 28px 18px 22px;
+    border-radius: 24px;
+  }
+
+  .solution-shell::before {
+    border-radius: 24px;
   }
 
   .solution-header {
-    margin-bottom: 26px;
+    margin-bottom: 22px;
   }
 
   .section-kicker {
@@ -666,8 +760,8 @@ select:focus {
   }
 
   #solution-benefits h2 {
-    font-size: 2rem;
-    line-height: 1.12;
+    font-size: 2.15rem;
+    line-height: 1.1;
     margin-bottom: 14px;
   }
 
@@ -682,15 +776,16 @@ select:focus {
   }
 
   .benefit-card {
-    padding: 20px 16px;
+    min-height: auto;
+    padding: 18px 16px 16px;
     border-radius: 18px;
   }
 
   .benefit-card h3 {
-    font-size: 1.08rem;
+    font-size: 1.02rem;
   }
 
   .benefit-card p {
-    font-size: 0.96rem;
+    font-size: 0.95rem;
   }
 }
