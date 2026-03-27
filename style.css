@@ -789,3 +789,118 @@ select:focus {
     font-size: 0.95rem;
   }
 }
+
+/* ============================= */
+/* PROBLEM ABSCHNITT (DUNKEL)   */
+/* ============================= */
+#false-solution {
+  padding: 110px 20px;
+  background: linear-gradient(135deg, #0F3D44 0%, #0A2F35 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* leichte Glow-Effekte */
+#false-solution::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 204, 184, 0.25), transparent);
+}
+
+#false-solution::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(95, 145, 255, 0.25), transparent);
+}
+
+/* ============================= */
+/* HEADLINE                     */
+/* ============================= */
+#false-solution h2 {
+  text-align: center;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 1.2;
+  margin-bottom: 60px;
+  letter-spacing: -0.02em;
+}
+
+/* ============================= */
+/* GRID                         */
+/* ============================= */
+.false-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ============================= */
+/* CARDS                        */
+/* ============================= */
+.false-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 22px;
+  padding: 28px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+.false-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+
+/* ============================= */
+/* ICON                         */
+/* ============================= */
+.false-icon {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+/* ============================= */
+/* TEXT                         */
+/* ============================= */
+.false-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.false-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* ============================= */
+/* MOBILE                       */
+/* ============================= */
+@media (max-width: 768px) {
+  #false-solution {
+    padding: 70px 16px;
+  }
+
+  #false-solution h2 {
+    font-size: 2rem;
+    margin-bottom: 36px;
+  }
+
+  .false-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .false-card {
+    padding: 20px;
+  }
+}
