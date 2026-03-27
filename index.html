@@ -222,6 +222,7 @@
 
   <!-- ============================= -->
   <!-- PROBLEM-ABSCHNITT            -->
+  <!-- MIT PNG-GRAFIKEN             -->
   <!-- ============================= -->
   <section id="false-solution">
     <div class="container">
@@ -236,31 +237,10 @@
 
       <div class="false-grid">
 
-        <!-- Karte 1 -->
         <article class="false-card">
           <div class="false-visual">
-            <svg viewBox="0 0 420 220" role="img" aria-label="Diagramm zu starren Arbeitszeiten">
-              <defs>
-                <filter id="glowA2">
-                  <feGaussianBlur stdDeviation="5" result="blur"/>
-                  <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
-              </defs>
-
-              <text x="105" y="34" fill="#F4FBFB" font-size="22" font-style="italic" font-weight="700">ZEIT</text>
-              <text x="230" y="150" fill="#F4FBFB" font-size="18" font-style="italic" font-weight="700">EFFIZIENZ</text>
-
-              <rect x="64" y="52" width="104" height="138" rx="22" fill="rgba(55,240,243,0.08)"/>
-              <rect x="208" y="138" width="92" height="52" rx="18" fill="rgba(255,47,99,0.08)"/>
-
-              <rect x="64" y="52" width="104" height="138" rx="22" fill="none" stroke="#37F0F3" stroke-width="4" filter="url(#glowA2)"/>
-              <rect x="208" y="138" width="92" height="52" rx="18" fill="none" stroke="#FF2F63" stroke-width="4" filter="url(#glowA2)"/>
-            </svg>
+            <img src="graphic-1.png" alt="Grafik zu starren Arbeitszeiten">
           </div>
-
           <div class="false-content">
             <h3>Starre Arbeitszeiten</h3>
             <p>
@@ -270,37 +250,10 @@
           </div>
         </article>
 
-        <!-- Karte 2 -->
         <article class="false-card">
           <div class="false-visual">
-            <svg viewBox="0 0 420 220" role="img" aria-label="Diagramm zu Fixkosten und Verpflichtungen">
-              <defs>
-                <filter id="glowB2">
-                  <feGaussianBlur stdDeviation="4" result="blur"/>
-                  <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
-              </defs>
-
-              <rect x="38" y="50" width="286" height="62" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.08)"/>
-              <rect x="122" y="132" width="252" height="62" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.08)"/>
-
-              <text x="70" y="88" fill="#F5FCFC" font-size="22">Versicherungen...</text>
-              <text x="190" y="170" fill="#F5FCFC" font-size="22">Urlaubsgeld...</text>
-
-              <rect x="292" y="58" width="56" height="44" rx="12" fill="#59DDD8" filter="url(#glowB2)"/>
-              <text x="305" y="87" fill="#FFFFFF" font-size="24" font-weight="700">€€</text>
-
-              <rect x="138" y="140" width="56" height="44" rx="12" fill="#59DDD8" filter="url(#glowB2)"/>
-              <text x="151" y="169" fill="#FFFFFF" font-size="24" font-weight="700">€€</text>
-
-              <path d="M362 76 l12 12 l0 -9 l12 0" fill="none" stroke="#FF335F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M60 150 l12 12 l0 -9 l12 0" fill="none" stroke="#FF335F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <img src="graphic-2.png" alt="Grafik zu Fixkosten und Verpflichtungen">
           </div>
-
           <div class="false-content">
             <h3>Fixkosten & Verpflichtungen</h3>
             <p>
@@ -310,57 +263,10 @@
           </div>
         </article>
 
-        <!-- Karte 3 -->
         <article class="false-card">
           <div class="false-visual">
-            <svg viewBox="0 0 420 220" role="img" aria-label="Vereinfachtes Diagramm zu Timenizer vs. Inhouse">
-              <defs>
-                <filter id="glowC2">
-                  <feGaussianBlur stdDeviation="4" result="blur"/>
-                  <feMerge>
-                    <feMergeNode in="blur"/>
-                    <feMergeNode in="SourceGraphic"/>
-                  </feMerge>
-                </filter>
-              </defs>
-
-              <!-- Achsen -->
-              <line x1="56" y1="186" x2="350" y2="186" stroke="rgba(255,255,255,0.42)" stroke-width="4" stroke-dasharray="8 8"/>
-              <line x1="56" y1="186" x2="56" y2="44" stroke="rgba(255,255,255,0.42)" stroke-width="4" stroke-dasharray="8 8"/>
-
-              <path d="M340 176 l12 10 l-12 10" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M46 52 l10 -12 l10 12" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-
-              <!-- Start -->
-              <circle cx="56" cy="186" r="8" fill="#F5FCFC"/>
-
-              <!-- Linien -->
-              <path d="M56 186 C124 184, 194 176, 314 146" fill="none" stroke="#FF2F63" stroke-width="5" filter="url(#glowC2)"/>
-              <path d="M56 186 C124 184, 214 170, 320 78" fill="none" stroke="#38F0F3" stroke-width="5" filter="url(#glowC2)"/>
-
-              <!-- Inhouse -->
-              <rect x="292" y="120" width="86" height="28" rx="14" fill="rgba(255,255,255,0.20)"/>
-              <text x="313" y="139" fill="#85F5F5" font-size="14" font-weight="700">Inhouse</text>
-              <circle cx="316" cy="146" r="18" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="7 7"/>
-
-              <!-- Timenizer -->
-              <rect x="266" y="28" width="96" height="28" rx="14" fill="rgba(255,255,255,0.20)"/>
-              <text x="286" y="47" fill="#4CF2F0" font-size="14" font-weight="700">Timenizer</text>
-              <circle cx="320" cy="78" r="18" fill="none" stroke="#38F0F3" stroke-width="4" stroke-dasharray="7 7"/>
-
-              <!-- kleine alte Referenz links -->
-              <rect x="148" y="92" width="96" height="26" rx="13" fill="rgba(255,255,255,0.18)"/>
-              <text x="167" y="109" fill="#FFFFFF" font-size="13" font-weight="700">Timenizer</text>
-
-              <!-- Pfeile -->
-              <path d="M228 96 C248 98, 262 108, 272 124" fill="none" stroke="#FFD400" stroke-width="4" stroke-linecap="round"/>
-              <path d="M266 117 l8 9 l-11 -1" fill="none" stroke="#FFD400" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-
-              <path d="M306 66 l12 0 l-6 -12" fill="none" stroke="#38F0F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M318 136 l12 0 l-6 -12" fill="none" stroke="#FF2F63" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <img src="graphic-3.png" alt="Grafik zu Stillstand statt Wachstum">
           </div>
-
           <div class="false-content">
             <h3>Stillstand statt Wachstum</h3>
             <p>
