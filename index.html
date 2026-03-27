@@ -241,33 +241,23 @@
           <div class="false-visual">
             <svg viewBox="0 0 420 220" role="img" aria-label="Diagramm zu starren Arbeitszeiten">
               <defs>
-                <filter id="glowA">
-                  <feGaussianBlur stdDeviation="6" result="blur"/>
+                <filter id="glowA2">
+                  <feGaussianBlur stdDeviation="5" result="blur"/>
                   <feMerge>
                     <feMergeNode in="blur"/>
                     <feMergeNode in="SourceGraphic"/>
                   </feMerge>
                 </filter>
-                <linearGradient id="cyanFill" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="#37F0F3" stop-opacity="0.26"/>
-                  <stop offset="100%" stop-color="#37F0F3" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="pinkFill" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="#FF2F63" stop-opacity="0.20"/>
-                  <stop offset="100%" stop-color="#FF2F63" stop-opacity="0"/>
-                </linearGradient>
               </defs>
 
-              <rect x="0" y="0" width="420" height="220" rx="24" fill="transparent"/>
+              <text x="105" y="34" fill="#F4FBFB" font-size="22" font-style="italic" font-weight="700">ZEIT</text>
+              <text x="230" y="150" fill="#F4FBFB" font-size="18" font-style="italic" font-weight="700">EFFIZIENZ</text>
 
-              <text x="95" y="34" fill="#F4FBFB" font-size="22" font-style="italic" font-weight="700">ZEIT</text>
-              <text x="226" y="148" fill="#F4FBFB" font-size="18" font-style="italic" font-weight="700">EFFIZIENZ</text>
+              <rect x="64" y="52" width="104" height="138" rx="22" fill="rgba(55,240,243,0.08)"/>
+              <rect x="208" y="138" width="92" height="52" rx="18" fill="rgba(255,47,99,0.08)"/>
 
-              <rect x="58" y="54" width="110" height="136" rx="20" fill="url(#cyanFill)"/>
-              <rect x="200" y="140" width="96" height="50" rx="18" fill="url(#pinkFill)"/>
-
-              <rect x="58" y="54" width="110" height="136" rx="20" fill="none" stroke="#37F0F3" stroke-width="4" filter="url(#glowA)"/>
-              <rect x="200" y="140" width="96" height="50" rx="18" fill="none" stroke="#FF2F63" stroke-width="4" filter="url(#glowA)"/>
+              <rect x="64" y="52" width="104" height="138" rx="22" fill="none" stroke="#37F0F3" stroke-width="4" filter="url(#glowA2)"/>
+              <rect x="208" y="138" width="92" height="52" rx="18" fill="none" stroke="#FF2F63" stroke-width="4" filter="url(#glowA2)"/>
             </svg>
           </div>
 
@@ -285,8 +275,8 @@
           <div class="false-visual">
             <svg viewBox="0 0 420 220" role="img" aria-label="Diagramm zu Fixkosten und Verpflichtungen">
               <defs>
-                <filter id="glowB">
-                  <feGaussianBlur stdDeviation="5" result="blur"/>
+                <filter id="glowB2">
+                  <feGaussianBlur stdDeviation="4" result="blur"/>
                   <feMerge>
                     <feMergeNode in="blur"/>
                     <feMergeNode in="SourceGraphic"/>
@@ -294,20 +284,20 @@
                 </filter>
               </defs>
 
-              <rect x="34" y="42" width="286" height="66" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.08)"/>
-              <rect x="124" y="128" width="250" height="66" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.08)"/>
+              <rect x="38" y="50" width="286" height="62" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.08)"/>
+              <rect x="122" y="132" width="252" height="62" rx="16" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.08)"/>
 
-              <text x="64" y="84" fill="#F5FCFC" font-size="22">Versicherungen...</text>
-              <text x="196" y="170" fill="#F5FCFC" font-size="22">Urlaubsgeld...</text>
+              <text x="70" y="88" fill="#F5FCFC" font-size="22">Versicherungen...</text>
+              <text x="190" y="170" fill="#F5FCFC" font-size="22">Urlaubsgeld...</text>
 
-              <rect x="286" y="52" width="58" height="46" rx="13" fill="#59DDD8" filter="url(#glowB)"/>
-              <text x="300" y="83" fill="#FFFFFF" font-size="24" font-weight="700">€€</text>
+              <rect x="292" y="58" width="56" height="44" rx="12" fill="#59DDD8" filter="url(#glowB2)"/>
+              <text x="305" y="87" fill="#FFFFFF" font-size="24" font-weight="700">€€</text>
 
-              <rect x="142" y="138" width="58" height="46" rx="13" fill="#59DDD8" filter="url(#glowB)"/>
-              <text x="156" y="169" fill="#FFFFFF" font-size="24" font-weight="700">€€</text>
+              <rect x="138" y="140" width="56" height="44" rx="12" fill="#59DDD8" filter="url(#glowB2)"/>
+              <text x="151" y="169" fill="#FFFFFF" font-size="24" font-weight="700">€€</text>
 
-              <path d="M362 80 l14 14 l0 -10 l14 0" fill="none" stroke="#FF335F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M58 154 l14 14 l0 -10 l14 0" fill="none" stroke="#FF335F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M362 76 l12 12 l0 -9 l12 0" fill="none" stroke="#FF335F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M60 150 l12 12 l0 -9 l12 0" fill="none" stroke="#FF335F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
 
@@ -323,10 +313,10 @@
         <!-- Karte 3 -->
         <article class="false-card">
           <div class="false-visual">
-            <svg viewBox="0 0 420 220" role="img" aria-label="Diagramm zu Wachstum mit Timenizer vs. Inhouse">
+            <svg viewBox="0 0 420 220" role="img" aria-label="Vereinfachtes Diagramm zu Timenizer vs. Inhouse">
               <defs>
-                <filter id="glowC">
-                  <feGaussianBlur stdDeviation="4.5" result="blur"/>
+                <filter id="glowC2">
+                  <feGaussianBlur stdDeviation="4" result="blur"/>
                   <feMerge>
                     <feMergeNode in="blur"/>
                     <feMergeNode in="SourceGraphic"/>
@@ -335,46 +325,39 @@
               </defs>
 
               <!-- Achsen -->
-              <line x1="58" y1="186" x2="356" y2="186" stroke="rgba(255,255,255,0.42)" stroke-width="4" stroke-dasharray="8 8"/>
-              <line x1="58" y1="186" x2="58" y2="42" stroke="rgba(255,255,255,0.42)" stroke-width="4" stroke-dasharray="8 8"/>
+              <line x1="56" y1="186" x2="350" y2="186" stroke="rgba(255,255,255,0.42)" stroke-width="4" stroke-dasharray="8 8"/>
+              <line x1="56" y1="186" x2="56" y2="44" stroke="rgba(255,255,255,0.42)" stroke-width="4" stroke-dasharray="8 8"/>
 
-              <path d="M346 176 l12 10 l-12 10" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M48 50 l10 -12 l10 12" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M340 176 l12 10 l-12 10" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M46 52 l10 -12 l10 12" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 
               <!-- Start -->
-              <circle cx="58" cy="186" r="8" fill="#F5FCFC"/>
+              <circle cx="56" cy="186" r="8" fill="#F5FCFC"/>
 
-              <!-- Timenizer Label -->
-              <rect x="262" y="26" width="92" height="28" rx="14" fill="rgba(255,255,255,0.20)"/>
-              <text x="282" y="45" fill="#4CF2F0" font-size="14" font-weight="700">Timenizer</text>
+              <!-- Linien -->
+              <path d="M56 186 C124 184, 194 176, 314 146" fill="none" stroke="#FF2F63" stroke-width="5" filter="url(#glowC2)"/>
+              <path d="M56 186 C124 184, 214 170, 320 78" fill="none" stroke="#38F0F3" stroke-width="5" filter="url(#glowC2)"/>
 
-              <!-- Inhouse Label -->
-              <rect x="286" y="116" width="84" height="28" rx="14" fill="rgba(255,255,255,0.20)"/>
-              <text x="308" y="135" fill="#85F5F5" font-size="14" font-weight="700">Inhouse</text>
+              <!-- Inhouse -->
+              <rect x="292" y="120" width="86" height="28" rx="14" fill="rgba(255,255,255,0.20)"/>
+              <text x="313" y="139" fill="#85F5F5" font-size="14" font-weight="700">Inhouse</text>
+              <circle cx="316" cy="146" r="18" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="7 7"/>
 
-              <!-- Alte kleine Box links -->
-              <rect x="126" y="88" width="118" height="34" rx="17" fill="rgba(255,255,255,0.20)"/>
-              <text x="145" y="109" fill="#FFFFFF" font-size="14" font-weight="700">Timenizer</text>
-              <text x="202" y="109" fill="#FFFFFF" font-size="11">…kaufe dir Zeit.</text>
+              <!-- Timenizer -->
+              <rect x="266" y="28" width="96" height="28" rx="14" fill="rgba(255,255,255,0.20)"/>
+              <text x="286" y="47" fill="#4CF2F0" font-size="14" font-weight="700">Timenizer</text>
+              <circle cx="320" cy="78" r="18" fill="none" stroke="#38F0F3" stroke-width="4" stroke-dasharray="7 7"/>
 
-              <!-- Kurven -->
-              <path d="M58 186 C118 178, 198 166, 318 142" fill="none" stroke="#FF2F63" stroke-width="5" filter="url(#glowC)"/>
-              <path d="M58 186 C130 182, 222 168, 318 68" fill="none" stroke="#38F0F3" stroke-width="5" filter="url(#glowC)"/>
+              <!-- kleine alte Referenz links -->
+              <rect x="148" y="92" width="96" height="26" rx="13" fill="rgba(255,255,255,0.18)"/>
+              <text x="167" y="109" fill="#FFFFFF" font-size="13" font-weight="700">Timenizer</text>
 
-              <!-- Punkte -->
-              <circle cx="272" cy="134" r="8" fill="#FFD400"/>
-              <circle cx="318" cy="142" r="18" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="7 7"/>
-              <circle cx="318" cy="68" r="18" fill="none" stroke="#38F0F3" stroke-width="4" stroke-dasharray="7 7"/>
+              <!-- Pfeile -->
+              <path d="M228 96 C248 98, 262 108, 272 124" fill="none" stroke="#FFD400" stroke-width="4" stroke-linecap="round"/>
+              <path d="M266 117 l8 9 l-11 -1" fill="none" stroke="#FFD400" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 
-              <!-- Gelber Pfeil -->
-              <path d="M220 102 C240 100, 255 108, 266 124" fill="none" stroke="#FFD400" stroke-width="4" stroke-linecap="round"/>
-              <path d="M260 116 l8 10 l-12 -1" fill="none" stroke="#FFD400" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-
-              <!-- Türkiser Pfeil -->
-              <path d="M304 58 l12 0 l-6 -12" fill="none" stroke="#38F0F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-
-              <!-- Pinker Pfeil -->
-              <path d="M320 132 l12 0 l-6 -12" fill="none" stroke="#FF2F63" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M306 66 l12 0 l-6 -12" fill="none" stroke="#38F0F3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M318 136 l12 0 l-6 -12" fill="none" stroke="#FF2F63" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
 
